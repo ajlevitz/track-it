@@ -45,5 +45,9 @@ end
 # gem 'debugger', group: [:development, :test]
 
 # Plot Graphs in ruby, http://makandracards.com/makandra/8745-plot-graphs-in-ruby
-# gem 'rmagick', :require => false
-# gem 'gruff'
+gem 'rmagick' #, :require => false
+gem 'gruff'
+
+# Better errors
+gem 'better_errors'
+gem 'binding_of_caller'

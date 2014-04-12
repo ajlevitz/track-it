@@ -16,4 +16,26 @@
   <% end %>
 </table>
 
+</br>
+
+<table>
+    <tr>
+      <th>Metadata</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td>Average</td>
+      <td><%= Thing.average(:value) %></td>
+    </tr>
+    <tr>
+      <td>% Success</td>
+      <td><%= Thing.success_perc %></td>
+    </tr>
+</table>
+
+<% Thing.graph %>
+<%= image_tag 'blah.png' %>
+
+</br>
+
 <%= link_to 'New thing', new_thing_path %>
