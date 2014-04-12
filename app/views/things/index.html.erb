@@ -1,0 +1,19 @@
+<h1>Listing things</h1>
+ 
+<table>
+  <tr>
+    <th>thing's date</th>
+    <th>value</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+  <% @things.sort_by(&:date).each do |thing| %>
+    <tr>
+      <td><%= thing.date %></td>
+      <td class="<%= value_color(thing) %>" ><%= thing.value %></td>
+      <td><%= link_to 'Show', thing_path(thing) %> | <%= link_to 'Edit', edit_thing_path(thing) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'New thing', new_thing_path %>

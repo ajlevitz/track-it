@@ -43,3 +43,7 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Plot Graphs in ruby, http://makandracards.com/makandra/8745-plot-graphs-in-ruby
+# gem 'rmagick', :require => false
+# gem 'gruff'

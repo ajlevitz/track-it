@@ -1,0 +1,28 @@
+<%= form_for @thing do |f| %>
+
+  <% if @thing.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@thing.errors.count, "error") %> prohibited
+      this thing from being saved:</h2>
+    <ul>
+    <% @thing.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <p>
+    <%= f.label :date %><br>
+    <%= f.date_select :date, :required => true %>
+  </p>
+ 
+  <p>
+    <%= f.label :value %><br>
+    <%= f.text_field :value %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
